@@ -11,19 +11,30 @@
       <nav id="menu">
         <ul>
           <li>
-            <a href="index.html">Inicio</a>
+            <router-link to="/" active-class="active">Inicio</router-link>
           </li>
           <li>
-            <a href="blog.html">Blog</a>
+            <router-link to="/blog" active-class="active">Blog</router-link>
           </li>
           <li>
-            <a href="formulario.html">Formulario</a>
+            <router-link to="/formulario" active-class="active"
+              >Formulario</router-link
+            >
           </li>
           <li>
-            <a href="#">Pagina 1</a>
+            <router-link to="/pagina" active-class="active"
+              >Pagina 1</router-link
+            >
           </li>
           <li>
-            <a href="#">Pagina 2</a>
+            <router-link to="/mi-componente" active-class="active"
+              >Pruebas</router-link
+            >
+          </li>
+          <li>
+            <router-link to="/peliculas" active-class="active"
+              >Peliculas</router-link
+            >
           </li>
         </ul>
       </nav>

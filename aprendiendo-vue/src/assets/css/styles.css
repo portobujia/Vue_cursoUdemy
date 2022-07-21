@@ -76,7 +76,7 @@ body {
 
 #menu ul{
     line-height: 85px;
-    width: 60%;
+    width: 80%;
     float:right;
 }
 
@@ -94,9 +94,40 @@ body {
     transition: 300ms all;
 }
 
+.alert-danger-provisional{
+    color:red;
+    font-weight:bold;
+}
+.alert-success-provisional{
+    color:green;
+    font-weight:bold;
+}
+.alert-purple-provisional{
+    color:purple;
+    font-weight:bold;
+}
+#menu a:hover,
+#menu .active{
+    color: #308330;
+}
 
-#menu a:hover{
-    color: #f13e3e;
+.listStyleNone{
+    list-style:none;
+}
+
+.yeargreen{
+    background: green;
+    color:white !important;
+    padding: 10px !important;
+    width: 111px !important;
+    text-align: center !important;
+}
+.yearblue{
+    background: blue;
+    color:white !important;
+    padding: 10px !important;
+    width: 111px !important;
+    text-align: center !important;
 }
 
 #slider{

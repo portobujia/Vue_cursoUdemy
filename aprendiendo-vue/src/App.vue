@@ -1,11 +1,8 @@
 <template>
   <div>
     <HeaderComponent />
-    <SliderComponent />
-    <div class="center">
-      <LastArticles />
-      <SidebarComponent />
-    </div>
+    <!--<LastArticles />-->
+    <router-view></router-view>
     <div class="clearfix"></div>
     <FooterComponent />
   </div>
@@ -13,18 +10,13 @@
 
 <script>
 import HeaderComponent from "./components/HeaderComponent.vue";
-import SliderComponent from "./components/Slider.vue";
-import SidebarComponent from "./components/SidebarComponent.vue";
-import LastArticles from "./components/LastArticles.vue";
 import FooterComponent from "./components/FooterComponent.vue";
 
 export default {
   name: "App",
   components: {
     HeaderComponent,
-    SliderComponent,
-    SidebarComponent,
-    LastArticles,
+
     FooterComponent,
   },
 };

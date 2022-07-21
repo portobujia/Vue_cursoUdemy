@@ -4,6 +4,8 @@
     <h2>{{ msg1 }}</h2>
     <h2>{{ texto }}</h2>
     <MiComponente></MiComponente>
+    <MiComponente></MiComponente>
+    <MiComponente></MiComponente>
   </div>
 </template>
 
