@@ -1,16 +1,23 @@
 <template>
-  <SliderComponent 
-  texto="Bienvenido al curso de Vue desde peliculas"
-  />
+  <SliderComponent texto="Bienvenido al curso de Vue desde peliculas" />
   <div class="center">
     <section id="content">
       <section id="content">
-        <h2 class="subheader">Peliculas</h2>
-
+        <h1 class="subheader">Peliculas</h1>
+        <div class="favorita" v-if="favorita">
+          <h2>{{ favorita.title }}</h2>
+        </div>
+        <h3>{{ misDatos }}</h3>
         <!--Listado articulos-->
         <div id="articles">
-          <div v-for="pelicula in peliculas" v-bind:key="pelicula.title">
-            <PeliculaOneComponent :pelicula="pelicula"></PeliculaOneComponent>
+          <div
+            v-for="pelicula in peliculasMayuscula"
+            v-bind:key="pelicula.title"
+          >
+            <PeliculaOneComponent
+              :pelicula="pelicula"
+              @favorita="haLlegadoLaPeliculaFavorita"
+            ></PeliculaOneComponent>
           </div>
         </div>
       </section>
@@ -30,8 +37,16 @@ export default {
     SliderComponent,
     SidebarComponent,
   },
+  methods: {
+    haLlegadoLaPeliculaFavorita(pelicula) {
+      this.favorita = pelicula;
+    },
+  },
   data() {
     return {
+      favorita: null,
+      nombre: "Alfonso",
+      apellido: "Porto",
       peliculas: [
         {
           title: "Batman",
@@ -50,6 +65,18 @@ export default {
         },
       ],
     };
+  },
+  computed: {
+    peliculasMayuscula() {
+      let peliculasMod = this.peliculas;
+      for (let i = 0; i < this.peliculas.length; i++) {
+        peliculasMod[i].title = peliculasMod[i].title.toUpperCase();
+      }
+      return peliculasMod;
+    },
+    misDatos() {
+      return this.nombre + " " + this.apellido;
+    },
   },
 };
 </script>
