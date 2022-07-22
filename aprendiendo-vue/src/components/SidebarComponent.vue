@@ -4,7 +4,6 @@
       <h3>Puedes hacer esto</h3>
       <a href="#" class="btn btn-success">Crear artículo</a>
     </div>
-
     <div id="search" class="sidebar-item">
       <h3>Buscador</h3>
       <p>Encuentra el artículo que buscas</p>
